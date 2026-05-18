@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Menambahkan Sebuah permission untuk mengakses internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Exaudinebula">
+
+        <!-- SPLASHSCREEN SEBAGAI LAUNCHER -->
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity (SEKARANG MENJADI DASHBOARD UTAMA) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- BaseActivity (Host for BottomNavigation) -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+
+        <!-- KalkulatorActivity (HALAMAN BARU) -->
+        <activity
+            android:name=".KalkulatorActivity"
+            android:exported="false" />
+
+        <!-- RegistrationActivity -->
+        <activity
+            android:name=".FormLogin.RegistrationActivity"
+            android:exported="false" />
+
+        <!-- ValidationActivity -->
+        <activity
+            android:name=".FormLogin.ValidationActivity"
+            android:exported="false" />
+
+        <!-- LoginResultActivity -->
+        <activity
+            android:name=".FormLogin.LoginResultActivity"
+            android:exported="false" />
+
+        <!-- LoginMainActivity  -->
+        <activity
+            android:name=".FormLogin.LoginMainActivity"
+            android:exported="false" />
+
+        <!-- WebViewActivity -->
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+
+        <!-- Menu Berita & Informasi -->
+        <activity
+            android:name=".tabs.TabsActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
