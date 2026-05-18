@@ -19,7 +19,7 @@ class TabsActivity : AppCompatActivity() {
         // Setup Toolbar
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.toolbar.title = "Berita & Informasi"
+        binding.toolbar.title = "Bina Desa - Aspirasi"
         binding.toolbar.setNavigationOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
@@ -47,8 +47,8 @@ class TabsActivity : AppCompatActivity() {
                     badge.isVisible = true
                 }
                 2 -> {
-                    tab.text = "Produk"
-                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_settings) // Menggunakan ic_settings sebagai placeholder produk
+                    tab.text = "Aspirasi"
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_person)
                 }
             }
         }.attach()

@@ -12,7 +12,7 @@ class TabsPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activi
         return when (position) {
             0 -> NewsFragment()
             1 -> InformationFragment()
-            2 -> ProductsFragment()
+            2 -> AspirasiFragment()
             else -> throw IllegalStateException("Invalid position")
         }
     }

@@ -7,7 +7,7 @@
     android:background="@color/bg_light">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvProducts"
+        android:id="@+id/rvAspirasi"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="8dp"

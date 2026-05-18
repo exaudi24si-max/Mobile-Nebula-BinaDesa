@@ -4,21 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_light"
     tools:context=".tabs.TabsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/primary_desa"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Tab Navigation"
-        app:titleTextColor="@color/white" />
+        app:title="Berita &amp; Informasi"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/primary_desa"
+        app:tabSelectedTextColor="@color/primary_desa"
+        app:tabTextColor="#808080"
+        app:tabIconTint="@color/primary_desa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
