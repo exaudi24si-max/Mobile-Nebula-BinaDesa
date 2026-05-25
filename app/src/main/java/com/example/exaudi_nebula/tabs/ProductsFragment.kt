@@ -14,19 +14,59 @@ class ProductsFragment : Fragment() {
     private var _binding: FragmentProductsBinding? = null
     private val binding get() = _binding!!
 
-    // Menggunakan Lorem Picsum agar gambar lebih stabil dan pasti tampil di emulator.
-    // Setiap item memiliki 'seed' yang berbeda agar gambar yang muncul unik.
+    // Data Laporan Aspirasi Masyarakat Bina Desa
+    // Menggunakan Lorem Picsum (picsum.photos) agar gambar lebih stabil dan pasti tampil di emulator
     private val aspirasiList = listOf(
-        AspirasiModel("Perbaikan Jalan Dusun III", "Menunggu Perbaikan", "https://picsum.photos/seed/desa1/500/300"),
-        AspirasiModel("Drainase Tersumbat RT 02", "Laporan Diterima", "https://picsum.photos/seed/desa2/500/300"),
-        AspirasiModel("Lampu Jalan Padam", "Sedang Diproses", "https://picsum.photos/seed/desa3/500/300"),
-        AspirasiModel("Pembangunan Jembatan Desa", "Selesai", "https://picsum.photos/seed/desa4/500/300"),
-        AspirasiModel("Sampah Menumpuk di Pasar", "Menunggu Perbaikan", "https://picsum.photos/seed/desa5/500/300"),
-        AspirasiModel("Renovasi Pos Kamling", "Laporan Diterima", "https://picsum.photos/seed/desa6/500/300"),
-        AspirasiModel("Pembersihan Saluran Air", "Sedang Diproses", "https://picsum.photos/seed/desa7/500/300"),
-        AspirasiModel("Perbaikan Irigasi Sawah", "Selesai", "https://picsum.photos/seed/desa8/500/300"),
-        AspirasiModel("Pemasangan Plang Nama Jalan", "Laporan Diterima", "https://picsum.photos/seed/desa9/500/300"),
-        AspirasiModel("Penataan Taman Lingkungan", "Sedang Diproses", "https://picsum.photos/seed/desa10/500/300")
+        AspirasiModel(
+            "Perbaikan Jalan Dusun III", 
+            "Menunggu Perbaikan", 
+            "https://picsum.photos/seed/road_fix/500/300"
+        ),
+        AspirasiModel(
+            "Drainase Tersumbat RT 02", 
+            "Laporan Diterima", 
+            "https://picsum.photos/seed/drainage/500/300"
+        ),
+        AspirasiModel(
+            "Laporan Lampu Jalan Padam", 
+            "Sedang Diproses", 
+            "https://picsum.photos/seed/street_lamp/500/300"
+        ),
+        AspirasiModel(
+            "Pembangunan Jembatan Desa", 
+            "Selesai", 
+            "https://picsum.photos/seed/bridge/500/300"
+        ),
+        AspirasiModel(
+            "Sampah Menumpuk di Pasar", 
+            "Menunggu Perbaikan", 
+            "https://picsum.photos/seed/trash_bin/500/300"
+        ),
+        AspirasiModel(
+            "Renovasi Pos Kamling", 
+            "Laporan Diterima", 
+            "https://picsum.photos/seed/village_hall/500/300"
+        ),
+        AspirasiModel(
+            "Pembersihan Saluran Air", 
+            "Sedang Diproses", 
+            "https://picsum.photos/seed/river_cleanup/500/300"
+        ),
+        AspirasiModel(
+            "Perbaikan Irigasi Sawah", 
+            "Selesai", 
+            "https://picsum.photos/seed/farm_irrigation/500/300"
+        ),
+        AspirasiModel(
+            "Pemasangan Plang Nama Jalan", 
+            "Laporan Diterima", 
+            "https://picsum.photos/seed/road_sign/500/300"
+        ),
+        AspirasiModel(
+            "Penataan Taman Lingkungan", 
+            "Sedang Diproses", 
+            "https://picsum.photos/seed/village_park/500/300"
+        )
     )
 
     override fun onCreateView(
@@ -40,7 +80,7 @@ class ProductsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Inisialisasi adapter dengan data Aspirasi
+        // Menggunakan AspirasiAdapter agar sesuai dengan tema laporan aspirasi masyarakat Bina Desa
         val adapter = AspirasiAdapter(aspirasiList) { item ->
             Toast.makeText(requireContext(), "Aspirasi: ${item.title}", Toast.LENGTH_SHORT).show()
         }
