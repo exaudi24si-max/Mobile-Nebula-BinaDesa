@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exaudi_nebula.FormLogin.LoginMainActivity
+import com.example.exaudi_nebula.tutorial.TutorialMessageActivity
 import com.example.exaudi_nebula.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class SplashScreenActivity : AppCompatActivity() {
             val intent = if (isLogin) {
                 Intent(this, BaseActivity::class.java)
             } else {
-                Intent(this, LoginMainActivity::class.java)
+                Intent(this, TutorialMessageActivity::class.java)
             }
             startActivity(intent)
             finish()

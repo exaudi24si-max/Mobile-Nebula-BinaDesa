@@ -15,4 +15,5 @@
     <!-- Warna Gradasi Header -->
     <color name="header_start">#2E7D32</color>
     <color name="header_end">#43A047</color>
+    <color name="abu_gelap">#4A4A4A</color>
 </resources>

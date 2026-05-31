@@ -8,11 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.exaudi_nebula.FormLogin.LoginMainActivity
 import com.example.exaudi_nebula.FormLogin.LoginResultActivity
+import com.example.exaudi_nebula.data.api.CatFactApiClient
+import com.example.exaudi_nebula.data.api.PhotoApiClient
 import com.example.exaudi_nebula.databinding.FragmentHomeBinding
+import com.example.exaudi_nebula.photo.PhotoAdapter
 import com.example.exaudi_nebula.tabs.TabsActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -80,6 +86,40 @@ class HomeFragment : Fragment() {
                 }
                 .setNegativeButton("Tidak", null)
                 .show()
+        }
+
+        // --- Tambahan Pertemuan 11 ---
+        loadCatFact()
+        loadPhoto()
+
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
+        }
+    }
+
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta unik desa."
+            }
+        }
+    }
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                if (photos.isNotEmpty()) {
+                    val adapter = PhotoAdapter(photos)
+                    binding.rvGallery.adapter = adapter
+                    binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+                }
+            } catch (e: Exception) {
+                android.widget.Toast.makeText(requireContext(), "Gagal memuat data: Periksa koneksi internet", android.widget.Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

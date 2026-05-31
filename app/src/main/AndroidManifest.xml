@@ -70,6 +70,10 @@
             android:name=".tabs.TabsActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".tutorial.TutorialMessageActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
