@@ -74,6 +74,14 @@
             android:name=".tutorial.TutorialMessageActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".Note.NoteFormActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Complaint.ComplaintFormActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

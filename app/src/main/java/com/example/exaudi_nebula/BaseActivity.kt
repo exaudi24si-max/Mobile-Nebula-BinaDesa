@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.exaudi_nebula.Complaint.FragmentComplaint
+import com.example.exaudi_nebula.Note.FragmentNote
 import com.example.exaudi_nebula.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -36,8 +38,12 @@ class BaseActivity : AppCompatActivity() {
                     loadFragment(HomeFragment(), false)
                     true
                 }
-                R.id.nav_about -> {
-                    loadFragment(AboutFragment(), true)
+                R.id.nav_note -> {
+                    loadFragment(FragmentNote(), true)
+                    true
+                }
+                R.id.nav_complaint -> {
+                    loadFragment(FragmentComplaint(), true)
                     true
                 }
                 R.id.nav_profile -> {
