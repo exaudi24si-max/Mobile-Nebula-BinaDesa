@@ -15,6 +15,7 @@ import com.example.exaudi_nebula.FormLogin.LoginResultActivity
 import com.example.exaudi_nebula.data.api.CatFactApiClient
 import com.example.exaudi_nebula.data.api.PhotoApiClient
 import com.example.exaudi_nebula.databinding.FragmentHomeBinding
+import com.example.exaudi_nebula.pertemuan_13.ThirteenthActivity
 import com.example.exaudi_nebula.photo.PhotoAdapter
 import com.example.exaudi_nebula.tabs.TabsActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -65,6 +66,12 @@ class HomeFragment : Fragment() {
         // 4. Ke Menu Berita & Info (Tabs Navigation)
         binding.cardTabNav.setOnClickListener {
             val intent = Intent(requireContext(), TabsActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 6. Ke Pertemuan 13
+        binding.cardPertemuan13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 

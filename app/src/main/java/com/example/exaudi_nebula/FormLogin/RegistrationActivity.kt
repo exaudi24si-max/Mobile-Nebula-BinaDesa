@@ -7,7 +7,7 @@ import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exaudi_nebula.databinding.ActivityRegistrationBinding
 
-class RegistrationActivity : AppCompatActivity() {
+class   RegistrationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistrationBinding
     private lateinit var sharedPreferences: SharedPreferences

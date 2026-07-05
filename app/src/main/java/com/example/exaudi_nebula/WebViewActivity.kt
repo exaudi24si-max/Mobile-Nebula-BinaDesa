@@ -21,7 +21,7 @@ class WebViewActivity : AppCompatActivity() {
         binding.webView.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true
-            loadUrl("https://exaudi-sib.alwaysdata.net/")
+            loadUrl("https://klafikasi-deep-learning-alpukat.vercel.app/")
         }
     }
 

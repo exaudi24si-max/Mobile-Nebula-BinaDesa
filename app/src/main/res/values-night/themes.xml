@@ -2,6 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Exaudinebula" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary_desa</item>
+        <item name="colorPrimaryVariant">@color/primary_dark_desa</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status Bar Color -->
+        <item name="android:statusBarColor">@color/primary_dark_desa</item>
     </style>
 </resources>
