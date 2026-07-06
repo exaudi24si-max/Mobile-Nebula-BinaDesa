@@ -3,6 +3,7 @@ package com.example.exaudi_nebula.Complaint
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +34,14 @@ class ComplaintFormActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityComplaintFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Setup Toolbar dengan tombol Back
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = "Buat Pengaduan"
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+        }
 
         if (PermissionHelper.isNotificationPermissionRequired()) {
             val permission = Manifest.permission.POST_NOTIFICATIONS
@@ -75,9 +84,15 @@ class ComplaintFormActivity : AppCompatActivity() {
                 Toast.makeText(this, "Isi semua kolom!", Toast.LENGTH_SHORT).show()
             }
         }
+    }
 
-        binding.toolbar.setNavigationOnClickListener {
-            finish()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

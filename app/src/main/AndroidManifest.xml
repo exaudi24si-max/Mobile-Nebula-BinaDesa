@@ -100,8 +100,9 @@
             android:name=".Complaint.ComplaintFormActivity"
             android:exported="false" />
 
+        <!-- Fitur Scanner (Diubah dari Pertemuan 13) -->
         <activity
-            android:name=".pertemuan_13.ThirteenthActivity"
+            android:name=".scanner.ScannerActivity"
             android:exported="false" />
 
         <receiver

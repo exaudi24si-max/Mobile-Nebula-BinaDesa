@@ -10,13 +10,13 @@ import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.exaudi_nebula.Complaint.ComplaintFormActivity
 import com.example.exaudi_nebula.FormLogin.LoginMainActivity
-import com.example.exaudi_nebula.FormLogin.LoginResultActivity
 import com.example.exaudi_nebula.data.api.CatFactApiClient
 import com.example.exaudi_nebula.data.api.PhotoApiClient
 import com.example.exaudi_nebula.databinding.FragmentHomeBinding
-import com.example.exaudi_nebula.pertemuan_13.ThirteenthActivity
 import com.example.exaudi_nebula.photo.PhotoAdapter
+import com.example.exaudi_nebula.scanner.ScannerActivity
 import com.example.exaudi_nebula.tabs.TabsActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
@@ -51,9 +51,9 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        // 2. Ke Laporan/Result
+        // 2. Ke Form Laporan Pengaduan (Diperbarui untuk UAS)
         binding.cardCustom1.setOnClickListener {
-            val intent = Intent(requireContext(), LoginResultActivity::class.java)
+            val intent = Intent(requireContext(), ComplaintFormActivity::class.java)
             startActivity(intent)
         }
 
@@ -69,9 +69,9 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        // 6. Ke Pertemuan 13
-        binding.cardPertemuan13.setOnClickListener {
-            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
+        // 6. Ke Fitur Scanner & Kamera (Nama diperbarui agar sesuai untuk UAS)
+        binding.cardScanner.setOnClickListener {
+            val intent = Intent(requireContext(), ScannerActivity::class.java)
             startActivity(intent)
         }
 

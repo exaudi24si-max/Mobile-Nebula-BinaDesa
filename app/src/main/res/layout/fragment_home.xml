@@ -223,9 +223,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- MENU 6: PERTEMUAN 13 -->
+                <!-- MENU 6: SCANNER & KAMERA -->
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardPertemuan13"
+                    android:id="@+id/cardScanner"
                     android:layout_width="0dp"
                     android:layout_height="160dp"
                     android:layout_columnWeight="1"
@@ -248,7 +248,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pertemuan 13\nCamera &amp; QR"
+                            android:text="Scanner &amp;\nKamera"
                             android:textAlignment="center"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
